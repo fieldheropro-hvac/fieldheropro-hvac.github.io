@@ -7,15 +7,28 @@
 <meta name="description" content="Join FieldHero Decision Desk as a founding member for $59 monthly.">
 <style>
 :root{--bg:#07120f;--panel:#10201b;--text:#f4f8f6;--muted:#acc0b8;--green:#70e0a6;--gold:#e7b45a;--line:#2a433a}
-*{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 10%,#173c2e,transparent 38%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
-.wrap{max-width:760px;margin:auto;padding:28px 20px 60px} .logo{display:flex;align-items:center;gap:12px;font-weight:900;margin-bottom:46px}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 10%,#173c2e,transparent 38%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.wrap{max-width:760px;margin:auto;padding:28px 20px 60px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;margin-bottom:46px}
 .mark{width:46px;height:46px;border-radius:14px;background:var(--green);color:#062015;display:grid;place-items:center}
 .card{background:linear-gradient(180deg,var(--panel),#0c1915);border:1px solid var(--line);padding:28px;border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-h1{font-size:clamp(35px,7vw,58px);line-height:1;margin:0 0 18px} p{color:var(--muted);line-height:1.6} .price{font-size:45px;font-weight:900;margin:18px 0} .price small{font-size:16px;color:var(--muted)}
-ul{line-height:1.8;padding-left:21px} #paypal-button-container-P-32078906WT1021706NJMGAJY{max-width:520px;margin:26px auto 10px}
+h1{font-size:clamp(35px,7vw,58px);line-height:1;margin:0 0 18px}
+h2{line-height:1.2}
+p{color:var(--muted);line-height:1.6}
+.price{font-size:45px;font-weight:900;margin:18px 0}
+.price small{font-size:16px;color:var(--muted)}
+ul{line-height:1.8;padding-left:21px}
+#paypal-button-container-P-32078906WT1021706NJMGAJY{max-width:520px;margin:26px auto 10px}
 .notice{border-left:4px solid var(--gold);background:#211b0d;padding:13px;border-radius:9px;color:#f8e1ad;font-size:13px}
+.next{border:1px solid var(--line);background:#0b1814;padding:18px;border-radius:14px;margin:20px 0 6px}
+.next h2{margin:0 0 10px;font-size:21px}
+.next ol{margin:0;padding-left:21px;line-height:1.65;color:var(--muted)}
+.next strong{color:var(--text)}
 .success{display:none;border-left:4px solid var(--green);background:#102b1d;padding:18px;border-radius:12px;margin-top:20px}
-.success a{color:var(--green);font-weight:900} .fine{font-size:12px} .back{color:var(--green);text-decoration:none}
+.success a{display:block;background:var(--green);color:#062015;font-weight:900;text-align:center;text-decoration:none;padding:14px;border-radius:10px;margin-top:14px}
+.fine{font-size:12px}
+.back{color:var(--green);text-decoration:none}
 </style>
 </head>
 <body>
@@ -32,17 +45,33 @@ ul{line-height:1.8;padding-left:21px} #paypal-button-container-P-32078906WT10217
 <li>Founding rate remains locked while continuously active</li>
 <li>Cancel future billing through PayPal</li>
 </ul>
+
 <div class="notice"><b>One case</b> covers one job or system and reasonable follow-up for that same decision. Unused cases do not roll over.</div>
+
+<div class="next">
+<h2>What happens after you subscribe</h2>
+<ol>
+<li>PayPal approves the recurring membership and returns you to this page.</li>
+<li>Your <strong>PayPal subscription ID</strong> appears automatically.</li>
+<li>Tap <strong>Text FIELDHERO to activate</strong> to send that ID to (937) 803-2556.</li>
+<li>Your membership becomes active after the payment and subscriber name are matched.</li>
+</ol>
+<p class="fine" style="margin-bottom:0"><strong style="color:#f4f8f6">Keep this page open</strong> until you have saved or texted the subscription ID.</p>
+</div>
+
 <div id="paypal-button-container-P-32078906WT1021706NJMGAJY"></div>
+
 <div id="subscription-success" class="success">
 <h2 style="margin-top:0">Subscription approved.</h2>
 <p>Your PayPal subscription ID is <b id="subscription-id"></b>.</p>
-<p><a id="activation-text" href="#">Text FIELDHERO to activate your membership</a></p>
+<a id="activation-text" href="#">Text FIELDHERO to activate</a>
 <p class="fine">Keep the subscription ID for your records. Membership begins after the payment is visible and matched to your name.</p>
 </div>
+
 <p class="fine">Secure recurring billing is processed by PayPal. FieldHero does not receive or store your full payment-card information.</p>
 </div>
 </div>
+
 <script src="https://www.paypal.com/sdk/js?client-id=AU9tSqVl6wDcDp3u0biHYcHbM--0-iAiWpWF5Npqnor06SvZmuc0fUUlk7ryckArNmJdiZPezsWz7FGQ&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 <script>
 paypal.Buttons({
@@ -71,5 +100,10 @@ paypal.Buttons({
   }
 }).render('#paypal-button-container-P-32078906WT1021706NJMGAJY');
 </script>
-<div style="text-align:center;padding:22px;color:#acc0b8;font-size:12px"><a href="terms.html" style="color:#70e0a6">Terms</a> · <a href="privacy.html" style="color:#70e0a6">Privacy</a></div></body>
+
+<div style="text-align:center;padding:22px;color:#acc0b8;font-size:12px">
+<a href="terms.html" style="color:#70e0a6">Terms</a> ·
+<a href="privacy.html" style="color:#70e0a6">Privacy</a>
+</div>
+</body>
 </html>
