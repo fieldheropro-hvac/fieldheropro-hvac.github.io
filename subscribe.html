@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscribe — FieldHero Decision Desk</title>
+<meta name="description" content="Join FieldHero Decision Desk as a founding member for $59 monthly.">
+<style>
+:root{--bg:#07120f;--panel:#10201b;--text:#f4f8f6;--muted:#acc0b8;--green:#70e0a6;--gold:#e7b45a;--line:#2a433a}
+*{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 10%,#173c2e,transparent 38%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.wrap{max-width:760px;margin:auto;padding:28px 20px 60px} .logo{display:flex;align-items:center;gap:12px;font-weight:900;margin-bottom:46px}
+.mark{width:46px;height:46px;border-radius:14px;background:var(--green);color:#062015;display:grid;place-items:center}
+.card{background:linear-gradient(180deg,var(--panel),#0c1915);border:1px solid var(--line);padding:28px;border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+h1{font-size:clamp(35px,7vw,58px);line-height:1;margin:0 0 18px} p{color:var(--muted);line-height:1.6} .price{font-size:45px;font-weight:900;margin:18px 0} .price small{font-size:16px;color:var(--muted)}
+ul{line-height:1.8;padding-left:21px} #paypal-button-container-P-32078906WT1021706NJMGAJY{max-width:520px;margin:26px auto 10px}
+.notice{border-left:4px solid var(--gold);background:#211b0d;padding:13px;border-radius:9px;color:#f8e1ad;font-size:13px}
+.success{display:none;border-left:4px solid var(--green);background:#102b1d;padding:18px;border-radius:12px;margin-top:20px}
+.success a{color:var(--green);font-weight:900} .fine{font-size:12px} .back{color:var(--green);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="logo"><div class="mark">FH</div><div>FIELDHERO<br>DECISION DESK</div></div>
+<div class="card">
+<a class="back" href="index.html">← Back to FieldHero</a>
+<h1>Founding Member</h1>
+<div class="price">$59 <small>USD every month</small></div>
+<p>Four Decision Desk cases per monthly billing cycle, with diagnostic direction, pricing guidance, customer explanation, and estimate and invoice wording.</p>
+<ul>
+<li>Four cases each billing cycle</li>
+<li>Extra cases available for $20</li>
+<li>Founding rate remains locked while continuously active</li>
+<li>Cancel future billing through PayPal</li>
+</ul>
+<div class="notice"><b>One case</b> covers one job or system and reasonable follow-up for that same decision. Unused cases do not roll over.</div>
+<div id="paypal-button-container-P-32078906WT1021706NJMGAJY"></div>
+<div id="subscription-success" class="success">
+<h2 style="margin-top:0">Subscription approved.</h2>
+<p>Your PayPal subscription ID is <b id="subscription-id"></b>.</p>
+<p><a id="activation-text" href="#">Text FIELDHERO to activate your membership</a></p>
+<p class="fine">Keep the subscription ID for your records. Membership begins after the payment is visible and matched to your name.</p>
+</div>
+<p class="fine">Secure recurring billing is processed by PayPal. FieldHero does not receive or store your full payment-card information.</p>
+</div>
+</div>
+<script src="https://www.paypal.com/sdk/js?client-id=AU9tSqVl6wDcDp3u0biHYcHbM--0-iAiWpWF5Npqnor06SvZmuc0fUUlk7ryckArNmJdiZPezsWz7FGQ&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+paypal.Buttons({
+  style: {
+    shape: 'rect',
+    color: 'gold',
+    layout: 'vertical',
+    label: 'subscribe'
+  },
+  createSubscription: function(data, actions) {
+    return actions.subscription.create({
+      plan_id: 'P-32078906WT1021706NJMGAJY'
+    });
+  },
+  onApprove: function(data, actions) {
+    var subscriptionId = data.subscriptionID || '';
+    document.getElementById('subscription-id').textContent = subscriptionId;
+    var message = 'FIELDHERO — I subscribed as a Founding Member. My PayPal subscription ID is ' + subscriptionId + '.';
+    document.getElementById('activation-text').href = 'sms:+19378032556?body=' + encodeURIComponent(message);
+    document.getElementById('subscription-success').style.display = 'block';
+    document.getElementById('subscription-success').scrollIntoView({behavior:'smooth', block:'center'});
+  },
+  onError: function(err) {
+    console.error(err);
+    alert('PayPal could not complete the subscription. Please try again or text FieldHero at (937) 803-2556.');
+  }
+}).render('#paypal-button-container-P-32078906WT1021706NJMGAJY');
+</script>
+<div style="text-align:center;padding:22px;color:#acc0b8;font-size:12px"><a href="terms.html" style="color:#70e0a6">Terms</a> · <a href="privacy.html" style="color:#70e0a6">Privacy</a></div></body>
+</html>
