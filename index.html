@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FieldHero Decision Desk</title>
 <meta name="description" content="Fast diagnostic direction, pricing guidance, and customer-ready wording for independent HVAC and handyman professionals.">
 <style>
 :root{--ink:#07120f;--panel:#10201b;--text:#f4f8f6;--muted:#acc0b8;--green:#70e0a6;--gold:#e7b45a;--line:#2a433a}
-*{box-sizing:border-box}body{margin:0;background:var(--ink);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
-.wrap{max-width:1080px;margin:auto;padding:22px}.hero{min-height:78vh;display:grid;align-items:center;padding:50px 0;background:radial-gradient(circle at 80% 20%,#173c2e 0,transparent 36%)}
-.logo{display:flex;align-items:center;gap:12px;font-weight:900}.mark{width:46px;height:46px;border-radius:14px;background:var(--green);color:#062015;display:grid;place-items:center}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.wrap{max-width:1080px;margin:auto;padding:22px}
+.hero{min-height:78vh;display:grid;align-items:center;padding:50px 0;background:radial-gradient(circle at 80% 20%,#173c2e 0,transparent 36%)}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900}
+.mark{width:46px;height:46px;border-radius:14px;background:var(--green);color:#062015;display:grid;place-items:center}
 .eyebrow{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:12px;margin-top:60px}
-h1{font-size:clamp(42px,8vw,82px);line-height:.98;max-width:900px;margin:16px 0}h2{font-size:34px}p{color:var(--muted);line-height:1.65;font-size:18px}.lead{max-width:760px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:14px 18px;border-radius:12px;border:1px solid var(--line);color:var(--text);text-decoration:none;font-weight:800}.btn.primary{background:var(--green);color:#062015;border-color:var(--green)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(180deg,var(--panel),#0c1915);border:1px solid var(--line);padding:22px;border-radius:18px}.card h3{font-size:22px;margin-top:0}
-section{padding:70px 0}.price{font-size:46px;font-weight:900}.price small{font-size:15px;color:var(--muted)}.featured{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}
-ul{padding-left:20px;color:#dce9e4;line-height:1.8}.bar{background:var(--gold);color:#2a1a00;padding:13px;text-align:center;font-weight:900}
-.quote{font-size:25px;color:white;max-width:850px}.fine{font-size:12px}.cta{text-align:center;background:#13261f;border:1px solid var(--line);border-radius:24px;padding:38px}
+h1{font-size:clamp(42px,8vw,82px);line-height:.98;max-width:900px;margin:16px 0}
+h2{font-size:34px}
+p{color:var(--muted);line-height:1.65;font-size:18px}
+.lead{max-width:760px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;padding:14px 18px;border-radius:12px;border:1px solid var(--line);color:var(--text);text-decoration:none;font-weight:800}
+.btn.primary{background:var(--green);color:#062015;border-color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:linear-gradient(180deg,var(--panel),#0c1915);border:1px solid var(--line);padding:22px;border-radius:18px}
+.card h3{font-size:22px;margin-top:0}
+section{padding:70px 0}
+.price{font-size:46px;font-weight:900}
+.price small{font-size:15px;color:var(--muted)}
+.featured{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}
+ul{padding-left:20px;color:#dce9e4;line-height:1.8}
+.bar{background:var(--gold);color:#2a1a00;padding:13px;text-align:center;font-weight:900}
+.quote{font-size:25px;color:white;max-width:850px}
+.fine{font-size:12px}
+.cta{text-align:center;background:#13261f;border:1px solid var(--line);border-radius:24px;padding:38px}
 footer{text-align:center;padding:30px;color:var(--muted);font-size:12px}
 @media(max-width:800px){.grid{grid-template-columns:1fr}.hero{min-height:auto}.eyebrow{margin-top:38px}}
 </style>
 </head>
 <body>
 <div class="bar">20 FOUNDING MEMBERSHIPS — RATE LOCKED WHILE ACTIVE</div>
+
 <div class="wrap">
 <header class="hero">
 <div>
@@ -30,7 +48,7 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:12px}
 <h1>Know what to check. Know what to charge. Know what to say.</h1>
 <p class="lead">For independent HVAC and handyman professionals who are capable of doing the work—but do not want to lose an hour second-guessing the diagnosis, underprice the repair, or improvise the customer conversation.</p>
 <div class="actions">
-<a class="btn primary" href="#subscribe">Subscribe for $59/month</a>
+<a class="btn primary" href="subscribe.html">Subscribe for $59/month</a>
 <a class="btn" href="#how">See how it works</a>
 </div>
 </div>
@@ -65,8 +83,9 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:12px}
 <li>Extra cases: $20 each</li>
 <li>Founding rate locked while active</li>
 </ul>
-<a class="btn primary" href="#subscribe">Subscribe for $59/month</a>
+<a class="btn primary" href="subscribe.html">Subscribe for $59/month</a>
 </div>
+
 <div class="card">
 <div style="color:var(--gold);font-weight:900">ONE CASE</div>
 <div class="price">$35</div>
@@ -78,6 +97,7 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:12px}
 </ul>
 <a class="btn" href="https://paypal.me/JessFligor/35" target="_blank" rel="noopener">Pay $35 with PayPal</a>
 </div>
+
 <div class="card">
 <h3>What makes a case?</h3>
 <p>One equipment problem or job decision at one location. A case may include reasonable follow-up needed to complete that same decision. A separate system, unrelated failure, or new visit is a new case.</p>
@@ -97,58 +117,34 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:12px}
 <section>
 <div class="cta">
 <h2>Stop letting one uncertain decision eat the profit from the whole job.</h2>
-<p>Subscribe through PayPal, then text <b>FIELDHERO</b>, your name, and the job type to <b>(937) 803-2556</b>. The first round is limited to 20 founding members.</p>
-<a class="btn primary" href="#subscribe">Subscribe for $59/month</a>
+<p>Review the founding membership details, subscribe securely through PayPal, and text your generated subscription ID to activate.</p>
+<a class="btn primary" href="subscribe.html">Review and subscribe</a>
 </div>
 </section>
 
-<section id="subscribe">
-<h2>Start the founding membership</h2>
+<section>
+<h2>One-time payments</h2>
 <div class="grid">
-<div class="card featured" style="grid-column:span 2">
-<div style="color:var(--green);font-weight:900">AUTOMATIC MONTHLY MEMBERSHIP</div>
-<div class="price">$59 <small>USD every month</small></div>
-<p>Four Decision Desk cases per billing cycle. Founding pricing stays locked while your subscription remains continuously active.</p>
-<div id="paypal-button-container-P-32078906WT1021706NJMGAJY" style="max-width:520px;margin-top:22px"></div>
-<div id="subscription-success" style="display:none;border-left:4px solid var(--green);background:#102b1d;padding:16px;border-radius:10px;margin-top:18px">
-<h3>Subscription approved.</h3>
-<p>Your PayPal subscription ID is <b id="subscription-id"></b>.</p>
-<a id="activation-text" class="btn primary" href="#">Text FIELDHERO to activate</a>
-</div>
+<div class="card">
+<h3>Single case</h3>
+<div class="price">$35</div>
+<p>No membership required. Use it when one job has you stuck.</p>
+<a class="btn" href="https://paypal.me/JessFligor/35" target="_blank" rel="noopener">Pay $35</a>
 </div>
 <div class="card">
-<h3>One-time payments</h3>
-<p><b>Single case:</b> $35</p>
-<a class="btn" href="https://paypal.me/JessFligor/35" target="_blank" rel="noopener">Pay $35</a>
-<p><b>Extra member case:</b> $20</p>
+<h3>Extra member case</h3>
+<div class="price">$20</div>
+<p>For active founding members who need more than four cases in a billing cycle.</p>
 <a class="btn" href="https://paypal.me/JessFligor/20" target="_blank" rel="noopener">Pay $20</a>
 </div>
 </div>
-<p class="fine">PayPal processes recurring billing securely. After approval, text the generated subscription ID so membership can be matched and activated.</p>
 </section>
-
 </div>
-<footer>FieldHero Decision Desk provides decision support for experienced tradespeople. It does not replace licensing, onsite testing, applicable codes, manufacturer instructions, engineering, or the technician’s responsibility for safety and final judgment. · <a href="terms.html" style="color:inherit">Terms</a> · <a href="privacy.html" style="color:inherit">Privacy</a></footer>
-<script src="https://www.paypal.com/sdk/js?client-id=AU9tSqVl6wDcDp3u0biHYcHbM--0-iAiWpWF5Npqnor06SvZmuc0fUUlk7ryckArNmJdiZPezsWz7FGQ&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-<script>
-paypal.Buttons({
-  style: {shape:'rect',color:'gold',layout:'vertical',label:'subscribe'},
-  createSubscription: function(data, actions) {
-    return actions.subscription.create({plan_id:'P-32078906WT1021706NJMGAJY'});
-  },
-  onApprove: function(data, actions) {
-    var subscriptionId = data.subscriptionID || '';
-    document.getElementById('subscription-id').textContent = subscriptionId;
-    var message = 'FIELDHERO — I subscribed as a Founding Member. My PayPal subscription ID is ' + subscriptionId + '.';
-    document.getElementById('activation-text').href = 'sms:+19378032556?body=' + encodeURIComponent(message);
-    document.getElementById('subscription-success').style.display = 'block';
-    document.getElementById('subscription-success').scrollIntoView({behavior:'smooth',block:'center'});
-  },
-  onError: function(err) {
-    console.error(err);
-    alert('PayPal could not complete the subscription. Please try again or text FieldHero at (937) 803-2556.');
-  }
-}).render('#paypal-button-container-P-32078906WT1021706NJMGAJY');
-</script>
+
+<footer>
+FieldHero Decision Desk provides decision support for experienced tradespeople. It does not replace licensing, onsite testing, applicable codes, manufacturer instructions, engineering, or the technician’s responsibility for safety and final judgment.
+· <a href="terms.html" style="color:inherit">Terms</a>
+· <a href="privacy.html" style="color:inherit">Privacy</a>
+</footer>
 </body>
 </html>
